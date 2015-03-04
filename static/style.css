@@ -1,0 +1,110 @@
+html{height: 100%;}
+body{
+    height: 100%;
+    position: relative;
+    background-color: #9D9D9D;
+}
+.container{
+    height: 100%;
+    width: 960px;
+    margin: auto;
+}
+.header{
+    background-color: #91BAE8;
+    min-height: 80px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 4px 4px 10px #000;
+}
+.logo igm{
+    width: 70px;
+}
+.site-name {
+    font-size: 30pt;
+    float: left;
+    margin: 20px auto auto;
+}
+.site-name a, a:visited{text-decoration: none; color: black}
+.logo {
+    margin: 10px;
+}
+.mera-logo{
+    background: url(/static/images/logo.png) no-repeat;
+    width: 175px;
+    height: 55px;
+    float: right;
+    margin-top: 10px;
+}
+
+.content{
+    min-height: 75%;
+    background: #F2F2F2;
+    border-radius: 10px;
+    margin-bottom: 94px;
+    box-shadow: 4px 4px 10px #000;
+}
+
+.footer{
+    background-color: #91BAE8;
+    min-height: 80px;
+    margin: -84px auto auto;
+    bottom: 0px;
+    width: 960px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px #000;
+}
+
+.logo {
+    float: left;
+}
+.mera-logo {
+    float: right;
+}
+.copyright{
+    padding: 30px 0px 0px 20px;
+}
+.calculator{
+    position: absolute;
+    left: 30%;
+    top: 25%;
+    width: 40%;
+    background: #BDBDBD;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #7E7A7A;
+}
+.calculator .input-box{
+    background: #fff;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #7E7A7A;
+    font-size: 30pt;
+}
+.calculator .row{
+
+}
+.calculator .row .btn{
+    width: 17%;
+    float: left;
+    margin: 10px;
+    border: 1px solid #7E7A7A;
+    padding: 7px;
+    text-align: center;
+    background: #B0B0B0;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #746969;
+    font-size: 14pt;
+}
+
+.calculator .row .btn a{
+    text-decoration: none;
+    display: block;
+}
+
+.calculator .row .btn.clear{
+    background: #BB8383;
+}
+
+.calculator .row .btn.oper{
+    background: #5989B8;
+}

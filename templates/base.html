@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Online Calculator</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<script type=text/javascript src="{{url_for('static', filename='jquery-1.11.2.min.js') }}"></script>
+<div class="container">
+    <div class="header">
+    {% block head %}
+        <div class="logo"><a href="/"><img src="/static/images/calculator.png" width="70px"></a></div>
+        <div class="site-name"><a href="/">Online Calculator</a></div>
+        <a href="http://rtfm.merann.ru"><div class="mera-logo"></div></a>
+    {% endblock %}
+    </div>
+    <div class="content">
+    {% block content %}
+    {% endblock %}
+    </div>
+    <div class="footer">
+    {% block footer %}
+        <div class="copyright">&#169;2015 Zharkov Aleksandr</div>
+    {%endblock %}
+    </div>
+</div>
+</body>
+</html>
