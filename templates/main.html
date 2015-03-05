@@ -1,47 +1,39 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<script type=text/javascript>
-    buttons = $('#calculator').find('div');
-    buttons.on('click', function(e) {
-        var target, val;
-        target = $(this);
-        val = target.text();
-        console.log(val);
-        return this;
-      });
-</script>
+
 <div class="calculator">
-    <div class="input-box">123</div>
+    <div id="input" class="input-box"></div>
     <div class="row">
-        <div class="btn oper"><a class="bat" href="#">(</a></div>
-        <div class="btn oper"><a href="#">)</a></div>
-        <div class="btn oper"><a href="#">BS</a></div>
-        <div class="btn clear"><a href="#">C</a></div>
+        <div class="btn oper"><a class="butt" href="#">(</a></div>
+        <div class="btn oper"><a class="butt" href="#">)</a></div>
+        <div class="btn oper"><a class="butt" href="#">BS</a></div>
+        <div class="btn clear"><a class="butt" href="#">C</a></div>
     </div>
     <div class="row">
-        <div class="btn"><a href="#">7</a></div>
-        <div class="btn"><a href="#">8</a></div>
-        <div class="btn"><a href="#">9</a></div>
-        <div class="btn oper"><a href="#">-</a></div>
+        <div class="btn"><a class="butt" href="#">7</a></div>
+        <div class="btn"><a class="butt" href="#">8</a></div>
+        <div class="btn"><a class="butt" href="#">9</a></div>
+        <div class="btn oper"><a class="butt" href="#">-</a></div>
     </div>
     <div class="row">
-        <div class="btn"><a href="#">4</a></div>
-        <div class="btn"><a href="#">5</a></div>
-        <div class="btn"><a href="#">6</a></div>
-        <div class="btn oper"><a href="#">+</a></div>
+        <div class="btn"><a class="butt" href="#">4</a></div>
+        <div class="btn"><a class="butt" href="#">5</a></div>
+        <div class="btn"><a class="butt" href="#">6</a></div>
+        <div class="btn oper"><a class="butt" href="#">+</a></div>
     </div>
     <div class="row">
-        <div class="btn"><a href="#">1</a></div>
-        <div class="btn"><a href="#">2</a></div>
-        <div class="btn"><a href="#">3</a></div>
-        <div class="btn oper"><a href="#">*</a></div>
+        <div class="btn"><a class="butt" href="#">1</a></div>
+        <div class="btn"><a class="butt" href="#">2</a></div>
+        <div class="btn"><a class="butt" href="#">3</a></div>
+        <div class="btn oper"><a class="butt" href="#">*</a></div>
     </div>
     <div class="row">
-        <div class="btn"><a href="#">.</a></div>
-        <div class="btn"><a href="#">0</a></div>
-        <div class="btn result"><a href="#">=</a></div>
-        <div class="btn oper"><a href="#">/</a></div>
+        <div class="btn"><a class="butt" href="#">.</a></div>
+        <div class="btn"><a class="butt" href="#">0</a></div>
+        <div class="btn result"><a class="butt" href="#">=</a></div>
+        <div class="btn oper"><a class="butt" href="#">/</a></div>
     </div>
 </div>
+<script type=text/javascript src="{{url_for('static', filename='calculator.js') }}"></script>
 {% endblock %}

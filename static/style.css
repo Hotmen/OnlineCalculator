@@ -79,6 +79,7 @@ body{
     border-radius: 10px;
     border: 1px solid #7E7A7A;
     font-size: 30pt;
+    padding-left: 15px;
 }
 .calculator .row{
 
@@ -107,4 +108,9 @@ body{
 
 .calculator .row .btn.oper{
     background: #5989B8;
+}
+
+.error{
+    padding: 30px;
+    font-size: 20pt;
 }
