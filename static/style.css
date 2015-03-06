@@ -12,7 +12,7 @@ body{
 .header{
     background-color: #91BAE8;
     min-height: 80px;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-bottom: 10px;
     box-shadow: 4px 4px 10px #000;
 }
@@ -39,9 +39,10 @@ body{
 .content{
     min-height: 75%;
     background: #F2F2F2;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-bottom: 94px;
     box-shadow: 4px 4px 10px #000;
+    padding: 30px;
 }
 
 .footer{
@@ -50,7 +51,7 @@ body{
     margin: -84px auto auto;
     bottom: 0px;
     width: 960px;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 4px 4px 10px #000;
 }
 
@@ -64,22 +65,25 @@ body{
     padding: 30px 0px 0px 20px;
 }
 .calculator{
-    position: absolute;
-    left: 30%;
-    top: 25%;
-    width: 40%;
+    width: 540px;
+    height: 350px;
     background: #BDBDBD;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid #7E7A7A;
+    margin: auto;
+    padding-top: 30px;
 }
 .calculator .input-box{
     background: #fff;
     height: 50px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid #7E7A7A;
     font-size: 30pt;
     padding-left: 15px;
+}
+.calculator .input-box:hover {
+    border: 1px solid #60CDE7;
 }
 .calculator .row{
 
@@ -96,7 +100,9 @@ body{
     box-shadow: 2px 2px 5px #746969;
     font-size: 14pt;
 }
-
+.calculator .row .btn:hover {
+    background: #A19999;
+}
 .calculator .row .btn a{
     text-decoration: none;
     display: block;
@@ -113,4 +119,53 @@ body{
 .error{
     padding: 30px;
     font-size: 20pt;
+}
+.menu{
+    float: left;
+    font-size: 20pt;
+}
+.menu ul{list-style: none;}
+.menu ul li{
+    display: block;
+    float: left;
+    padding-left: 15px;
+
+}
+.menu a{
+    text-decoration: none;
+    background: #B0B0B0;
+    padding: 5px;
+    border: 1px solid #7E7A7A;
+    border-radius: 5px;
+    box-shadow: 4px 4px 7px #000;
+}
+.menu a:hover{
+    background: #A19999;
+}
+.flash{
+    background: #C8ECD9;
+    font-size: 16pt;
+    width: 300px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 7px #000;
+}
+.opt-form{
+    padding: 20px;
+    border: 1px solid #7E7A7A;
+    box-shadow: 4px 4px 7px #000;
+    width: 40%;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.settings{
+    background: #DADADA;
+    font-size: 16pt;
+    width: 170px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 7px #000;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
 }

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}Options{% endblock %}
+{% block content %}
+{% for message in get_flashed_messages() %}
+<div class="flash">{{ message }}</div>
+{% endfor %}
+<div class="opt-form">
+<form action="{{ url_for('options') }}" method="POST">
+    <div id="radio"><h3>Choose calculator type</h3>
+    <p>
+        <input type="radio" name="type" value="Local"
+               {% if conf['mode'] == 'Local' %} checked='checked'{% endif %}">Local<br>
+        <input type="radio" name="type" value="SOAP"
+                {% if conf['mode'] == 'SOAP' %} checked='checked'{% endif %}>SOAP
+    </div>
+    <div id="soap_opt"><h3>SOAP options:</h3>
+        <p>
+            SOAP server address: <input type="text" value="{{ conf['server'] }}" name="server"><br><br>
+            SOAP server port:    <input type="text" value="{{ conf['port'] }}" name ="port">
+        </p>
+    </div>
+    <input type="submit" value="Save">
+</form>
+</div>
+{% endblock %}
