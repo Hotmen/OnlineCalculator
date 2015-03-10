@@ -58,11 +58,11 @@ def polish(string):
                 x = res.pop()
                 res.append(str(eval(x+el+y)))
             except IndexError:
-                return 'Error! Wrong numbers of operands'
+                return 'Error! Wrong expression'
             except ZeroDivisionError:
                 return 'Error! Zero division!'
     if len(res) != 1:
-        return 'Error! Wrong numbers of operands'
+        return 'Error! Wrong expression'
     return int(res.pop())
 
 if __name__ == '__main__':

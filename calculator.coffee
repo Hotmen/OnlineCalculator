@@ -1,24 +1,23 @@
+$ ->
+	Calculate = ->
+		$('.calculator').on 'click', 'a.butt', handler
 
-b = document.getElementsByClassName("butt")
-for i in [0..b.length]
-	b[i].addEventListener("click", cl)
-cl = ->
-	el = $ this
-	if el.innerHTML is "C"
-        document.getElementById("input").innerHTML = ""        
-    else if el.innerHTML is "BS"
-        str = document.getElementById("input").innerHTML
-        document.getElementById("input").innerHTML = str[0..str.length-1]
-    else if el.innerHTML is "="
-    	calc()
-    else
-        document.getElementById("input").innerHTML += el.innerHTML
-calc = ->
-	xmlhttp = new XMLHttpRequest()
-	xmlhttp.onreadystatechange = ->
-		if xmlhttp.readyState==4 && xmlhttp.status==200
-			document.getElementById("input").innerHTML = xmlhttp.responseText
-	data = document.getElementById("input").innerHTML
-	xmlhttp.open("GET", "calc?s="+encodeURIComponent(data) ,true)
-	xmlhttp.send()
-    
+	handler = (evt) ->
+		evt.preventDefault()
+		text = $(this).text()
+		lcd = $ "#input"
+		if  text is "C"
+            lcd.text("")
+        else if text is "BS"
+            lcd.text lcd.text().slice 0,lcd.text().length-1
+        else if text is "="
+        	calc()
+        else
+            lcd.text lcd.text() + text
+        return evt
+
+	calc = ->
+    	$.get "calc", {"s": $("#input").text()}, (data) ->
+        	$("#input").text data
+
+    Calculate()
