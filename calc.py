@@ -9,7 +9,7 @@ conf = {
 }
 
 app = Flask(__name__)
-
+app.config['SECRET_KEY'] ='secretverykey'
 
 @app.route('/')
 def index():

@@ -19,3 +19,4 @@ def startcalculate(host, port, data=None):
 
 if __name__ == '__main__':
     assert startcalculate('localhost', 8080, '2+2*(5-6/2)') == '6'
+    print startcalculate('localhost', 8080, '(8+5*2)/(2*3+1)')
